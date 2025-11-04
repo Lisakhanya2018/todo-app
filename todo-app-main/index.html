@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app dark" id="app">
+    <div class="hero-bg"></div>
+
+    <div class="container">
+      <header class="header">
+        <h1 class="title">TODO</h1>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707
+              m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="input-wrapper">
+        <div class="checkbox-circle"></div>
+        <input 
+          type="text" 
+          class="todo-input" 
+          id="todoInput" 
+          placeholder="Create a new todo..."
+        />
+      </div>
+
+      <div class="todo-list">
+        <div id="todosContainer"></div>
+
+        <div class="todo-footer">
+          <span id="itemsLeft">0 items left</span>
+          <div class="filter-buttons desktop">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+          </div>
+          <button class="clear-btn" id="clearCompleted">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="filter-buttons mobile">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <p class="drag-hint">Drag and drop to reorder list</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
