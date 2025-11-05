@@ -25,6 +25,7 @@ body {
   --dark-purple-100: hsl(236, 33%, 92%);
   --dark-purple-700: hsl(233, 14%, 35%);
   --dark-purple-800: hsl(237, 14%, 26%);
+   --hover-bg: hsl(234, 39%, 20%);
 }
 
 /* App Container */
