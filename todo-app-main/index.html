@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+  <!-- Make the site responsive on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Todo App</title>
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Main App Container; 'dark' sets default theme -->
   <div class="app dark" id="app">
+    <!-- Hero background section -->
     <div class="hero-bg"></div>
 
+    <!-- Centered content container -->
     <div class="container">
+      
+      <!-- Header section with title and theme toggle button -->
       <header class="header">
         <h1 class="title">TODO</h1>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <!-- SVG icon for theme toggle -->
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
               d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707
@@ -23,8 +34,11 @@
         </button>
       </header>
 
+      <!-- Input section to add new todos -->
       <div class="input-wrapper">
+        <!-- Decorative circle -->
         <div class="checkbox-circle"></div>
+        <!-- Input field for new todo -->
         <input 
           type="text" 
           class="todo-input" 
@@ -33,30 +47,39 @@
         />
       </div>
 
+      <!-- Todo List Section -->
       <div class="todo-list">
+        <!-- Container where todos are dynamically added via JS -->
         <div id="todosContainer"></div>
 
+        <!-- Footer with items left, filter buttons, and clear completed -->
         <div class="todo-footer">
+          <!-- Shows count of active todos -->
           <span id="itemsLeft">0 items left</span>
+          <!-- Filter buttons for desktop -->
           <div class="filter-buttons desktop">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="active">Active</button>
             <button class="filter-btn" data-filter="completed">Completed</button>
           </div>
+          <!-- Button to clear completed todos -->
           <button class="clear-btn" id="clearCompleted">Clear Completed</button>
         </div>
       </div>
 
+      <!-- Filter buttons for mobile view -->
       <div class="filter-buttons mobile">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="active">Active</button>
         <button class="filter-btn" data-filter="completed">Completed</button>
       </div>
 
+      <!-- Hint for drag & drop functionality -->
       <p class="drag-hint">Drag and drop to reorder list</p>
     </div>
   </div>
 
+  <!-- Link to JavaScript file -->
   <script src="app.js"></script>
 </body>
 </html>
